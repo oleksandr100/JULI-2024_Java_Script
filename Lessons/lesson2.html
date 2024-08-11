@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+// Масиви та об'єкти:
+// - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
+
+let StudentsMas ;
+StudentsMas=['books', 'pen',' pensil', 'copybook','marker', 'notebook', 'line', 'paper', 'dictionary', 'folder' ];
+console.log(StudentsMas[0])
+console.log(StudentsMas[1])
+console.log(StudentsMas[2])
+console.log(StudentsMas[3])
+console.log(StudentsMas[4])
+console.log(StudentsMas[5])
+console.log(StudentsMas[6])
+console.log(StudentsMas[7])
+console.log(StudentsMas[8])
+console.log(StudentsMas[9])
+
+// - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
+
+let book1={
+    genre:  'history' ,
+    title: 'Koбзар',
+    pageCount:'674',
+}
+console.log(book1)
+let book2={
+    genre: 'detektive' ,
+    title: 'sherlok Holmes' ,
+    pageCount: '344',
+}
+console.log(book2)
+let book3={
+    genre:'detektive',
+    title:'kingdom',
+    pageCount:'242',
+}
+console.log(book3)
+// - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.
+
+let book4={
+    title:'кобзар',pageCount:344,genre:'історія',authors:[{name:'Тарас Шевченко',age:26, }]}
+let book5={
+    title:'загадка ендхауза',pageCount:210,genre:'трейлер',authors:[{name:'Агата Крісті',age:38, }]}
+let book6={
+    title:'Реббека',pageCount:440,genre:'детектив',authors:[{name:'Дафна Дюморе',age:34, }]}
+console.log(book4);
+console.log(book5);
+console.log(book6)
+// - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
+let MensMas = [
+    {id:1,name:'Іван',username:'Іванов',password:'564' },
+    {id:2,name:'стипан',username:'Стипанов',password:'786' },
+    {id:3,name:'Дмитро',username:'Дмитров',password:'56' },
+    {id:4,name:'Іван',username:'Іванов',password:'543' },
+    {id:5,name:'Іван',username:'Іванов',password:'5640' },
+    {id:6,name:'Іван',username:'Іванов',password:'56422' },
+    {id:7,name:'Іван',username:'Іванов',password:'56' },
+    {id:8,name:'Іван',username:'Іванов',password:'86094' },
+    {id:9,name:'Іван',username:'Іванов',password:'577' },
+    {id:10,name:'Іван',username:'Іванов',password:'878' },
+
+]
+console.log ( MensMas)
+console.log(MensMas[0].password)
+//
+// - описати масив, в якому буде зберігатись інформація про температуру вранці, вдень і ввечері за термін в 7 днів. Як зробити цей масив - вам потрібно подумати. Нормальних варіантів опису - 2. Варіант, коли в вас буде одновимірний масив з 21 значенням вичключаємо одразу
+//
+// let pogoda = [
+//     { Monday: morning: ['15'] , dinner : ['25'] , evening: ['18']},
+//     { Tuesday : morning: ['16'] , dinner : ['27'] , evening : ['19']},
+//     { Wednesday : morning : ['16'] , dinner : ['28'] , evening : ['20']},
+// ]
+// console.log(pogoda[0],dinner)
+const temperatures = [
+     [14, 25, 19],
+//     день перший ранок обід і вечір
+    [15, 29, 22],
+    [16, 29, 23],
+    [17, 30, 23],
+    [18, 31, 22],
+    [19, 32, 22],
+    [20, 33, 21]
+
+];
+const day2Dinner = temperatures [1][2]
+console.log(day2Dinner)
+const  day7Morning = temperatures [6] [0]
+console.log(day7Morning)
+
+// Логічні розгалуження:
+// - Є змінна х, якій ви надаєте довільне числове значення.
+// Якщо змінна x не дорівнює нулю , виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
+
+// let x=5
+// let x=1
+// let x=0
+let x=-3
+if (x !==0){
+    console.log('Вірно');
+}
+else {
+    console.log('невірно');
+}
+
+// - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
+// (в першу, другу, третю или четверту частину години).
+
+let time =40 ;
+if ( time>0 && time<=15 ) {
+    console.log('1');
+}
+if (time>15 && time<=30){
+    console.log('2');
+}
+if (time>30 && time<=45){
+    console.log('3');
+}
+if (time>45 && time<=59){
+    console.log('4')
+}
+// - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
+
+let day =20 ;
+if ( day>0 && day<=10 ) {
+    console.log('1');
+}
+if (day>10 && day<=20){
+    console.log('2');
+}
+if (day>20 && day<=31){
+    console.log('3');
+}
+
+// - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
+
+ let week = 3 ;
+
+switch ( week ) {
+     case 1:
+         console.log(" monday" );
+         break;
+     case 2:
+         console.log( "tuesday" );
+         break;
+     case 3:
+         console.log("wednesday" );
+         break;
+     case 4:
+         console.log("thursay");
+         break;
+     case  5:
+         console.log("friday");
+         break;
+     case 6:
+         console.log("saturday");
+         break;
+     case 7:
+         console.log("sunday");
+         break;
+    default:
+        console.log('Невірний номер');
+ }
+// - Користувач вводить або має два числа.
+// Потрібно знайти та вивести максимальне число з тих двох .
+// Також потрібно врахувати коли введені рівні числа.
+let number1 = 20 ;
+let  number2 =30 ;
+ if (number1 > number2){
+     console.log("максимальне число : " ,number1);
+ }
+ else  if (number2>number1){
+     console.log("максимальне число:" , number2);
+ }
+ else {
+     console.log("рівні числа")
+ }
+//
+// - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
+// буде присвоювати змінній х значення "default"  якщо ви намагаєтесь присвоїти в неї falsy-значення (хибноподібні, тобто ті, які приводиться до false, а це 0 null undefined і тд).
+//
+
+//
+// - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray. За допомоги іф перевірити кожен його елемент на тривалість навчання. У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
+
+</script>
+</body>
+</html>
